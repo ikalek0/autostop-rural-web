@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Izpi Run - Stop · Aventura a dedo hasta un pueblo secreto · Julio 2027</title>
-<meta name="description" content="Sal en pareja desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia y llega a dedo a un pueblo secreto que te espera con una fiesta. Julio de 2027, 500 plazas. Apúntate a la lista de espera.">
+<title>Izpi Run · Aventura a dedo hasta un pueblo · Julio 2027</title>
+<meta name="description" content="Sal en pareja desde tu ciudad y llega a dedo a un pueblo que te espera con una fiesta. Lo desvelaremos pronto. Julio de 2027, 500 plazas. Apúntate a la lista de espera.">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Haz de tu finde una aventura a dedo">
-<meta property="og:description" content="En pareja, a dedo, hasta un pueblo secreto que te espera con una fiesta. Julio de 2027. 500 plazas.">
+<meta property="og:title" content="Izpi Run · Levanta el pulgar, el pueblo te espera">
+<meta property="og:description" content="En pareja, a dedo, hasta un pueblo que te espera con una fiesta. Julio de 2027. 500 plazas.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://images.unsplash.com/photo-1645393757776-1af0538d39fc?auto=format&fit=crop&w=1200&h=630&q=80">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,7 +48,13 @@ h3{font-size:1.45rem;line-height:1.1}
 header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
 .brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;line-height:1;display:flex;align-items:center;gap:.6rem}
-.brand .thumb{width:38px;height:38px;border-radius:50%;background:var(--sun);border:2px solid var(--ink);display:grid;place-items:center;font-size:1.2rem;transform:rotate(-12deg)}
+.logo{position:relative;width:44px;height:44px;flex:none}
+.logo .sign{position:absolute;inset:4px;background:var(--sun);border:2.5px solid var(--ink);border-radius:9px;transform:rotate(45deg);box-shadow:2px 2px 0 var(--ink)}
+.logo .thumb{position:absolute;inset:0;display:grid;place-items:center;font-size:1.25rem;transform:rotate(-10deg)}
+.logo .spark{position:absolute;top:-5px;right:-6px;color:var(--pink);font-size:1rem;line-height:1;text-shadow:1px 1px 0 var(--ink)}
+.word{display:flex;flex-direction:column;line-height:.9}
+.word b{font-family:var(--display);font-weight:400;font-size:1.45rem;letter-spacing:.01em}
+.word b i{font-style:normal;color:var(--blue)}
 .brand small{display:block;font-family:var(--text);font-size:.68rem;font-weight:600;letter-spacing:.08em;opacity:.6;margin-top:.15rem}
 .menu{display:flex;gap:1.6rem;list-style:none}
 .menu a{text-decoration:none;font-weight:600}
@@ -80,7 +86,9 @@ header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--c
 
 /* Edition card */
 .edition{background:var(--cream2);border-block:2px solid var(--ink)}
-.cards{display:grid;grid-template-columns:1.6fr 1fr;gap:1.6rem;margin-top:2rem}
+.cards{display:grid;grid-template-columns:1fr;gap:1.6rem;margin-top:2rem}
+.cards .card{display:grid;grid-template-columns:1.3fr 1fr}
+.cards .card .img{aspect-ratio:auto;min-height:340px}
 .card{background:var(--white);border:3px solid var(--ink);border-radius:var(--r);overflow:hidden;box-shadow:8px 8px 0 var(--ink);display:flex;flex-direction:column}
 .card .img{position:relative;aspect-ratio:16/9;overflow:hidden}
 .card .img img{width:100%;height:100%;object-fit:cover}
@@ -183,6 +191,7 @@ fieldset.fld{border:0}
 .radios input{accent-color:var(--blue)}
 .chk{display:flex;gap:.6rem;align-items:flex-start;font-size:.92rem;line-height:1.4}
 .chk input{margin-top:.2rem;width:1.1rem;height:1.1rem;accent-color:var(--blue);flex:none}
+#wl-city-other{margin-top:.5rem}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .msg{font-weight:800;border-radius:12px;padding:.8rem 1rem}
 .msg.ok{background:#DDF5E4;color:#14532D}
@@ -208,6 +217,8 @@ footer a:hover{text-decoration:underline}
   .collage{grid-template-columns:1fr 1fr;gap:.9rem}
   .collage .ph:nth-child(2){grid-column:1/-1;order:-1}
   .cards,.how-grid,.incl-grid,.join-grid{grid-template-columns:1fr;gap:2rem}
+  .cards .card{grid-template-columns:1fr}
+  .cards .card .img{min-height:0;aspect-ratio:16/10}
   .pillars .grid,.safe-grid{grid-template-columns:1fr}
   .nums{grid-template-columns:repeat(2,1fr);gap:1.6rem}
   .nums div:last-child{grid-column:1/-1}
@@ -229,13 +240,13 @@ footer a:hover{text-decoration:underline}
 <body>
 
 <div class="ticker" aria-hidden="true"><div class="track">
-  <span>Lista de espera abierta</span><span>500 plazas</span><span>Julio de 2027</span><span>Destino secreto</span><span>Sal desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia</span><span>Quien se apunta antes, se entera antes</span>
-  <span>Lista de espera abierta</span><span>500 plazas</span><span>Julio de 2027</span><span>Destino secreto</span><span>Sal desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia</span><span>Quien se apunta antes, se entera antes</span>
+  <span>Lista de espera abierta</span><span>500 plazas</span><span>Julio de 2027</span><span>Destino: lo desvelaremos pronto</span><span>Sal desde donde quieras</span><span>Quien se apunta antes, se entera antes</span>
+  <span>Lista de espera abierta</span><span>500 plazas</span><span>Julio de 2027</span><span>Destino: lo desvelaremos pronto</span><span>Sal desde donde quieras</span><span>Quien se apunta antes, se entera antes</span>
 </div></div>
 
 <header class="top">
   <div class="wrap nav">
-    <a class="brand" href="#inicio"><span class="thumb" aria-hidden="true">👍</span><span>Izpi Run - Stop<small>NOMBRE PROVISIONAL</small></span></a>
+    <a class="brand" href="#inicio" aria-label="Izpi Run, inicio"><span class="logo" aria-hidden="true"><span class="sign"></span><span class="thumb">👍</span><span class="spark">✦</span></span><span class="word"><b>IZPI <i>RUN</i></b><small>NOMBRE PROVISIONAL</small></span></a>
     <nav aria-label="Principal"><ul class="menu">
       <li><a href="#aventura">La aventura</a></li>
       <li><a href="#como-funciona">Cómo funciona</a></li>
@@ -249,14 +260,14 @@ footer a:hover{text-decoration:underline}
 <main id="inicio">
   <section class="hero">
     <div class="wrap">
-      <h1>Haz de tu finde<br><span class="hl">una aventura a dedo.</span></h1>
-      <p class="lead">Sales en pareja desde tu ciudad con un cartel y un pulgar. Llegas a un pueblo que no conoces, y te espera con una fiesta. Sin avión, sin pasaporte y sin saber quién te va a llevar.</p>
+      <h1>Levanta el pulgar.<br><span class="hl">El pueblo te espera.</span></h1>
+      <p class="lead">Un fin de semana de julio sales en pareja desde tu casa, con un cartel y un pulgar. Llegas a dedo a un pueblo que no conoces y que te recibe con una fiesta. Sin avión, sin pasaporte y sin saber quién te va a llevar.</p>
       <div class="cta"><a class="btn" href="#apuntate">Quiero mi plaza 👍</a><a class="btn blue" href="#como-funciona">¿Cómo va esto?</a></div>
       <div class="collage">
         <div class="ph"><img src="https://images.unsplash.com/photo-1630163747141-8c5c26312c5a?auto=format&fit=crop&w=700&q=75" alt="Dos chicas con mochila caminan por el arcén de una carretera" loading="eager"></div>
         <div class="ph"><img src="https://images.unsplash.com/photo-1645393757776-1af0538d39fc?auto=format&fit=crop&w=1100&q=75" alt="Un chico con mochila amarilla levanta el pulgar al borde de una carretera entre montañas" loading="eager"></div>
         <div class="ph"><img src="https://images.unsplash.com/photo-1517456793572-1d8efd6dc135?auto=format&fit=crop&w=700&q=75" alt="Gente celebrando bajo guirnaldas de luces en una fiesta" loading="lazy"></div>
-        <span class="sticker s1">Destino:<br>¡SECRETO!</span>
+        <span class="sticker s1">Destino:<br>pronto lo sabrás</span>
         <span class="sticker s2">500 plazas</span>
         <span class="sticker s3">Julio 2027</span>
       </div>
@@ -272,19 +283,13 @@ footer a:hover{text-decoration:underline}
           <div class="img">
             <img src="https://images.unsplash.com/photo-1752941039844-cea74355bf34?auto=format&fit=crop&w=1200&q=75" alt="Una persona contempla desde lo alto un pueblo de piedra entre montañas" loading="lazy">
             <span class="badge">Lista de espera abierta</span>
-            <h3>Izpi Run - Stop<br>Pueblo secreto</h3>
+            <h3>Izpi Run<br>Pueblo por desvelar</h3>
           </div>
           <div class="body">
-            <div class="facts"><span>📅 Julio de 2027 · 2 días</span><span>👥 En pareja</span><span>🎟️ Desde 60 €</span></div>
-            <p>Cinco ciudades de salida, un solo destino y una fiesta en el pueblo con sus vecinos. Desvelamos el pueblo antes de abrir la venta.</p>
+            <div class="facts"><span>📅 Julio de 2027 · 2 días</span><span>👥 En pareja</span><span>🎟️ Desde 57 €</span></div>
+            <p>Salidas oficiales desde Bilbao, Madrid, Zaragoza, Barcelona y Valencia, pero puedes salir desde tu casa, estés donde estés. Un solo destino y una fiesta en el pueblo con sus vecinos. El pueblo lo desvelaremos más adelante; de momento, es secreto.</p>
             <a class="btn pink" href="#apuntate">¡Me apunto! 👍</a>
           </div>
-        </article>
-        <article class="card soon">
-          <span class="marker" style="font-size:1.3rem;color:var(--sun)">¿Y después?</span>
-          <h3>Esto es solo el principio</h3>
-          <p>La primera edición es para 500 personas. Si sale como esperamos, volveremos cada verano, con más pueblos y más rutas.</p>
-          <a class="btn sm" href="#apuntate" style="align-self:flex-start">Avísame</a>
         </article>
       </div>
     </div>
@@ -292,9 +297,9 @@ footer a:hover{text-decoration:underline}
 
   <section class="numbers" aria-label="La aventura en cifras">
     <div class="wrap nums">
-      <div><b>5</b><span>ciudades de salida</span></div>
+      <div><b>5+</b><span>salidas: las oficiales y la tuya</span></div>
       <div><b>500</b><span>aventureros</span></div>
-      <div><b>1</b><span>pueblo secreto</span></div>
+      <div><b>1</b><span>pueblo por desvelar</span></div>
       <div><b>2</b><span>días de aventura</span></div>
       <div><b>0</b><span>aviones</span></div>
     </div>
@@ -318,7 +323,7 @@ footer a:hover{text-decoration:underline}
         <article class="pillar">
           <div class="ph"><img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=75" alt="Gente riendo y bailando en una fiesta bajo luces" loading="lazy"></div>
           <h3>Aventura <em>de fiesta</em></h3>
-          <p>Al llegar, fiesta con los vecinos hasta el amanecer, acampada y un domingo para descubrir la zona. Llegas con tu pareja y te vas con un montón de amigos.</p>
+          <p>Al llegar, fiesta con los vecinos hasta el amanecer y un domingo para descubrir la zona. Llegas con tu pareja y te vas con un montón de amigos.</p>
         </article>
       </div>
     </div>
@@ -330,16 +335,16 @@ footer a:hover{text-decoration:underline}
         <span class="kicker" style="color:var(--ink)">Así funciona</span>
         <h2>Una aventura<br>en tres tiempos</h2>
         <ol class="steps">
-          <li><div><h3>Sales</h3><p>Por la mañana, desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia. Sin transporte reservado: un cartel, un pulgar y tu pareja de viaje.</p></div></li>
+          <li><div><h3>Sales</h3><p>Por la mañana, desde una de las salidas oficiales (Bilbao, Madrid, Zaragoza, Barcelona o Valencia) o desde tu propia casa. Sin transporte reservado: un cartel, un pulgar y tu pareja de viaje.</p></div></li>
           <li><div><h3>Haces dedo</h3><p>Carreteras secundarias, gente que para y pueblos que no estaban en tu mapa. Con la app de seguimiento en el móvil y la organización pendiente de ti.</p></div></li>
-          <li><div><h3>Llegas</h3><p>Todas las parejas acaban en el mismo pueblo: acampada, música, comida de la zona y una fiesta con los vecinos.</p></div></li>
+          <li><div><h3>Llegas</h3><p>Todas las parejas acaban en el mismo pueblo: música, comida de la zona y una fiesta con los vecinos.</p></div></li>
         </ol>
         <p class="norace">No es una carrera: aquí no gana quien llega antes, gana quien más lo disfruta.</p>
       </div>
       <div class="ph"><img src="https://images.unsplash.com/photo-1645393757704-6dad68f7c012?auto=format&fit=crop&w=900&q=75" alt="Una chica con mochila hace autostop en una carretera de montaña" loading="lazy"></div>
     </div>
     <div class="wrap">
-      <svg class="route" viewBox="0 0 1000 260" role="img" aria-label="Cinco rutas salen de Bilbao, Madrid, Zaragoza, Barcelona y Valencia y llegan al mismo pueblo secreto">
+      <svg class="route" viewBox="0 0 1000 265" role="img" aria-label="Rutas que salen de Bilbao, Madrid, Zaragoza, Barcelona, Valencia y de donde tú quieras, y llegan al mismo pueblo">
         <g fill="none" stroke="#141414" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 14">
           <path d="M60 40 C 300 20, 520 80, 700 120 S 860 130, 900 130"/>
           <path d="M60 85 C 300 100, 520 110, 700 125 S 860 130, 900 130"/>
@@ -351,6 +356,7 @@ footer a:hover{text-decoration:underline}
         <g fill="#141414" font-family="Permanent Marker, cursive" font-size="19"><text x="80" y="34">Bilbao</text><text x="80" y="79">Madrid</text><text x="80" y="124">Zaragoza</text><text x="80" y="169">Barcelona</text><text x="80" y="214">Valencia</text></g>
         <circle cx="900" cy="130" r="42" fill="#2741E8" stroke="#141414" stroke-width="4"/>
         <text x="900" y="143" text-anchor="middle" fill="#FFD21F" font-family="Archivo Black, sans-serif" font-size="38">?</text>
+        <text x="80" y="252" fill="#2741E8" font-family="Permanent Marker, cursive" font-size="17">…o desde tu casa, estés donde estés</text>
       </svg>
     </div>
   </section>
@@ -364,16 +370,15 @@ footer a:hover{text-decoration:underline}
         <div class="ph"><img src="https://images.unsplash.com/photo-1471115853179-bb1d604434e0?auto=format&fit=crop&w=1000&q=75" alt="Tiendas de campaña en una pradera de montaña junto a un lago" loading="lazy"></div>
       </div>
       <div class="price">
-        <div class="top"><span class="tag">Aventura</span><span class="amt">60 € <small>por persona · previsto</small></span></div>
+        <div class="top"><span class="tag">Aventura</span><span class="amt"><small>desde</small> 57 € <small>por persona · previsto</small></span></div>
         <ul>
           <li>Seguro de accidentes para el día de la aventura</li>
-          <li>Pack de bienvenida con bebida</li>
+          <li>Pack de bienvenida</li>
           <li>App de seguimiento y apoyo de la organización durante el viaje</li>
           <li>Coche de ayuda si os quedáis atascados</li>
-          <li>Acampada en el pueblo</li>
           <li>Entrada a la fiesta de llegada</li>
         </ul>
-        <div class="extra"><b>¿Y la vuelta?</b> Estamos preparando un bus de vuelta a cada ciudad de salida, por unos 25 € más. Te avisaremos cuando esté confirmado.</div>
+        <div class="extra"><b>Extras opcionales</b> Acampada en el pueblo y bus de vuelta a cada ciudad de salida. Te avisaremos cuando estén confirmados.</div>
       </div>
     </div>
   </section>
@@ -416,12 +421,14 @@ footer a:hover{text-decoration:underline}
       <span class="kicker">Lo que todo el mundo pregunta</span>
       <h2>Preguntas</h2>
       <div class="faq-list">
-        <details><summary>¿Por qué el destino es secreto?</summary><p>Estamos eligiendo el pueblo junto con varios ayuntamientos. Lo anunciaremos antes de abrir la venta, y quien esté en la lista de espera lo sabrá primero.</p></details>
+        <details><summary>¿Cuándo sabremos el pueblo?</summary><p>De momento es secreto: lo estamos eligiendo con varios ayuntamientos. Lo desvelaremos más adelante, antes de abrir la venta, y quien esté en la lista de espera lo sabrá primero.</p></details>
+        <details><summary>No vivo en ninguna de esas cinco ciudades. ¿Puedo ir?</summary><p>Claro. Las cinco salidas oficiales son donde estaremos para recibiros por la mañana, pero puedes salir desde tu casa, estés donde estés. Dínoslo al apuntarte.</p></details>
         <details><summary>¿Cuándo se abre la venta?</summary><p>Si todo va según lo previsto, a principios de 2027. La lista de espera no te compromete a nada: solo te avisamos.</p></details>
         <details><summary>¿Y si no conseguimos llegar?</summary><p>No te dejamos sin plan. Os proponemos transporte público u otro tramo, o mandamos un coche de ayuda si hay uno libre. No podemos garantizar a qué hora os recogerán, pero sí que no estaréis solos.</p></details>
         <details><summary>No tengo pareja de viaje. ¿Puedo apuntarme?</summary><p>Sí. Márcalo en el formulario y te ayudaremos a encontrar a alguien de tu ciudad.</p></details>
         <details><summary>¿Es seguro hacer autostop?</summary><p>Vais en pareja, localizables, con botón de ayuda, palabra clave y foto de la matrícula de cada coche. Además hay un seguro de accidentes. Puedes leer todo el protocolo en <a href="https://ikalek0.github.io/autostop-rural-ayuntamiento/normas.html">las normas</a>.</p></details>
-        <details><summary>¿Cómo vuelvo a casa?</summary><p>Estamos preparando un bus de vuelta a cada ciudad de salida, por unos 25 € más. También podéis volver por vuestra cuenta.</p></details>
+        <details><summary>¿Cómo vuelvo a casa?</summary><p>Estamos preparando un bus de vuelta a cada ciudad de salida, como extra opcional. También podéis volver por vuestra cuenta.</p></details>
+        <details><summary>¿Puedo ayudar como voluntario?</summary><p>¡Sí! Apúntate en el mismo formulario y elige «Como voluntario». Te contaremos los turnos y lo que necesitamos.</p></details>
       </div>
     </div>
   </section>
@@ -434,22 +441,30 @@ footer a:hover{text-decoration:underline}
         <p>Te avisaremos antes que a nadie cuando desvelemos el pueblo y cuando abramos la venta.</p>
         <ul class="why">
           <li>No pagas nada ni te comprometes a nada.</li>
+          <li>¿Prefieres echar una mano? Elige «Como voluntario».</li>
           <li>Solo te escribiremos sobre esta aventura.</li>
           <li>Puedes darte de baja cuando quieras.</li>
         </ul>
       </div>
       <form class="wl" id="wl-form" novalidate>
+        <fieldset class="fld"><legend>¿Cómo quieres venir?</legend>
+          <div class="radios">
+            <label><input type="radio" name="tipo" value="Participante" checked> A la aventura 👍</label>
+            <label><input type="radio" name="tipo" value="Voluntario"> Como voluntario 🙌</label>
+          </div>
+        </fieldset>
         <div class="fld"><label for="wl-name">Tu nombre</label><input id="wl-name" name="nombre" type="text" autocomplete="given-name" maxlength="80" required></div>
         <div class="fld"><label for="wl-email">Tu correo</label><input id="wl-email" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="tu@correo.com"></div>
-        <div class="fld"><label for="wl-city">¿Desde qué ciudad saldrías?</label>
+        <div class="fld"><label for="wl-city" id="wl-city-label">¿Desde dónde saldrías?</label>
           <select id="wl-city" name="ciudad" required>
             <option value="">Elige una</option>
-            <option>Bilbao</option><option>Madrid</option><option>Zaragoza</option><option>Barcelona</option><option>Valencia</option><option value="Otra">Otra (dínoslo y lo tendremos en cuenta)</option>
+            <option>Bilbao</option><option>Madrid</option><option>Zaragoza</option><option>Barcelona</option><option>Valencia</option><option value="Otra">Desde otro sitio</option>
           </select>
+          <input id="wl-city-other" name="ciudad_otra" type="text" maxlength="60" placeholder="¿Desde dónde? (ciudad o pueblo)" aria-label="Ciudad o pueblo de salida" hidden>
         </div>
-        <fieldset class="fld"><legend>¿Tienes pareja de viaje?</legend>
+        <fieldset class="fld" id="wl-pair"><legend>¿Tienes pareja de viaje?</legend>
           <div class="radios">
-            <label><input type="radio" name="pareja" value="Sí" required> Sí</label>
+            <label><input type="radio" name="pareja" value="Sí"> Sí</label>
             <label><input type="radio" name="pareja" value="Busco pareja"> Busco pareja</label>
           </div>
         </fieldset>
@@ -473,7 +488,7 @@ footer a:hover{text-decoration:underline}
   <div class="wrap">
     <div class="foot">
       <div>
-        <h4>Izpi Run - Stop</h4>
+        <h4>Izpi Run</h4>
         <p>Aventura a dedo hasta un pueblo de España. Primera edición en julio de 2027. El nombre es provisional.</p>
       </div>
       <div>
@@ -489,7 +504,7 @@ footer a:hover{text-decoration:underline}
         <h4>Contacto</h4>
         <ul>
           <li><a href="mailto:inigodelacalle@gmail.com">inigodelacalle@gmail.com</a></li>
-          <li><a href="mailto:inigodelacalle@gmail.com?subject=Quiero%20ser%20voluntario">Hazte voluntario</a></li>
+          <li><a href="#voluntario" data-vol>Hazte voluntario</a></li>
         </ul>
       </div>
     </div>
@@ -507,26 +522,44 @@ footer a:hover{text-decoration:underline}
 var WAITLIST_URL = 'https://script.google.com/macros/s/AKfycbwFqLfDCfvzsYermAHE-YKKzE2VYpc3lf5LYG5A-oJNL3kgOwpYN-xV5Z5qcANb3ER6aw/exec';
 (function () {
   var form = document.getElementById('wl-form'), btn = document.getElementById('wl-btn'), msg = document.getElementById('wl-msg');
+  var other = document.getElementById('wl-city-other'), pairBox = document.getElementById('wl-pair'), cityLabel = document.getElementById('wl-city-label');
   function show(cls, text) { msg.className = 'msg ' + cls; msg.textContent = text; }
+  function tipo() { return (form.querySelector('input[name=tipo]:checked') || {}).value || 'Participante'; }
+  function sync() {
+    var vol = tipo() === 'Voluntario';
+    pairBox.hidden = vol;
+    cityLabel.textContent = vol ? '¿Desde dónde vendrías?' : '¿Desde dónde saldrías?';
+    btn.textContent = vol ? 'Quiero ser voluntario 🙌' : 'Apuntarme 👍';
+    other.hidden = form.ciudad.value !== 'Otra';
+  }
+  form.addEventListener('change', sync);
+  // "Hazte voluntario" links open the same form with the volunteer option chosen
+  function pickVolunteer() { form.querySelector('input[name=tipo][value=Voluntario]').checked = true; sync(); document.getElementById('apuntate').scrollIntoView({ behavior: 'smooth' }); setTimeout(function () { form.nombre.focus({ preventScroll: true }); }, 500); }
+  document.querySelectorAll('[data-vol]').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); pickVolunteer(); }); });
+  if (location.hash === '#voluntario') pickVolunteer();
+  sync();
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    var name = form.nombre.value.trim(), email = form.email.value.trim(), city = form.ciudad.value, pair = (form.querySelector('input[name=pareja]:checked') || {}).value || '';
+    var t = tipo(), vol = t === 'Voluntario';
+    var name = form.nombre.value.trim(), email = form.email.value.trim(), city = form.ciudad.value, pair = vol ? '' : ((form.querySelector('input[name=pareja]:checked') || {}).value || '');
     if (form.web.value) return; // bot
     if (!name) { form.nombre.focus(); show('err', 'Escribe tu nombre.'); return; }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { form.email.focus(); show('err', 'Revisa tu correo.'); return; }
-    if (!city) { form.ciudad.focus(); show('err', 'Elige tu ciudad de salida.'); return; }
-    if (!pair) { show('err', 'Dinos si tienes pareja de viaje.'); return; }
+    if (!city) { form.ciudad.focus(); show('err', 'Dinos desde dónde saldrías.'); return; }
+    if (city === 'Otra') { var o = other.value.trim(); if (!o) { other.focus(); show('err', 'Escribe desde qué ciudad o pueblo.'); return; } city = 'Otra: ' + o; }
+    if (!vol && !pair) { show('err', 'Dinos si tienes pareja de viaje.'); return; }
     if (!form.consentimiento.checked) { form.consentimiento.focus(); show('err', 'Necesitamos tu permiso para guardar el correo.'); return; }
-    var params = new URLSearchParams({ nombre: name, email: email, ciudad: city, pareja: pair, consentimiento: 'si', origen: (new URLSearchParams(location.search).get('o') || '').slice(0, 30) });
+    // origen carries the type (and a city outside the five) so the sheet gets it even with the first version of the script
+    var params = new URLSearchParams({ tipo: t, nombre: name, email: email, ciudad: city, pareja: pair, consentimiento: 'si', origen: (t + (city.indexOf('Otra') === 0 ? ' · ' + city.slice(6) : '')).slice(0, 30) });
     if (!WAITLIST_URL) {
-      location.href = 'mailto:inigodelacalle@gmail.com?subject=' + encodeURIComponent('Lista de espera') + '&body=' + encodeURIComponent('Nombre: ' + name + '\nCorreo: ' + email + '\nCiudad: ' + city + '\nPareja: ' + pair);
+      location.href = 'mailto:inigodelacalle@gmail.com?subject=' + encodeURIComponent(vol ? 'Voluntariado' : 'Lista de espera') + '&body=' + encodeURIComponent('Nombre: ' + name + '\nCorreo: ' + email + '\nCiudad: ' + city + (vol ? '' : '\nPareja: ' + pair));
       return;
     }
     btn.disabled = true; btn.textContent = 'Enviando…';
     fetch(WAITLIST_URL, { method: 'POST', mode: 'no-cors', body: params })
-      .then(function () { form.reset(); show('ok', '¡Hecho, ' + name + '! Estás en la lista. Te escribiremos cuando desvelemos el pueblo.'); })
+      .then(function () { form.reset(); show('ok', vol ? '¡Gracias, ' + name + '! Te escribiremos para contarte cómo puedes echar una mano.' : '¡Hecho, ' + name + '! Estás en la lista. Te escribiremos cuando desvelemos el pueblo.'); })
       .catch(function () { show('err', 'No se ha podido enviar. Prueba otra vez o escríbenos a inigodelacalle@gmail.com.'); })
-      .then(function () { btn.disabled = false; btn.textContent = 'Apuntarme 👍'; });
+      .then(function () { btn.disabled = false; sync(); });
   });
 })();
 </script>
