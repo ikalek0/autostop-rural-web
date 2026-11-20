@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Izpi Run - Stop · Aventura a dedo hasta un pueblo · Julio 2027</title>
+<meta name="description" content="Sal en pareja desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia y llega en autostop a un pueblo que te espera con una fiesta. Julio de 2027, 500 plazas. Apúntate a la lista de espera.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Haz de tu fin de semana una aventura a dedo">
+<meta property="og:description" content="En pareja, a dedo, hasta un pueblo secreto que te espera con una fiesta. Julio de 2027. 500 plazas.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#1747C9; --deep:#0E1B4D; --kraft:#C99A5B; --kraft-d:#A9783C;
+  --sun:#FFD21F; --pink:#FF5C93; --mist:#F3F5FB; --white:#fff;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --marker:"Permanent Marker","Marker Felt","Comic Sans MS",cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--display);font-size:1.0625rem;line-height:1.55;color:var(--deep);background:var(--white);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{max-width:100%}
+:focus-visible{outline:3px solid var(--pink);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+p{max-width:40rem}
+section{padding-block:5rem}
+h2{font-weight:800;font-size:clamp(2rem,4.4vw,3.2rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:1rem;text-wrap:balance}
+.marker{font-family:var(--marker);font-weight:400}
+
+.strip{background:var(--sun);color:var(--deep);font-weight:600;font-size:.95rem}
+.strip .wrap{display:flex;gap:.4rem 1.5rem;flex-wrap:wrap;justify-content:center;padding-block:.55rem;text-align:center}
+.strip a{font-weight:800}
+
+.hero{background:var(--blue);color:var(--white);position:relative;overflow:hidden;padding-bottom:6rem}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:1.6rem;height:6px;background:repeating-linear-gradient(90deg,var(--sun) 0 46px,transparent 46px 92px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem 1.5rem;padding-block:1.3rem;flex-wrap:wrap}
+.brand{font-family:var(--marker);font-size:1.5rem;color:var(--sun);text-decoration:none;line-height:1}
+.brand small{display:block;font-family:var(--display);font-size:.72rem;font-weight:600;color:rgba(255,255,255,.7);letter-spacing:.04em;margin-top:.25rem}
+.menu{display:flex;gap:1.4rem;list-style:none;flex-wrap:wrap}
+.menu a{text-decoration:none;font-weight:600}
+.menu a:hover{text-decoration:underline;text-underline-offset:5px}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;padding-top:3rem}
+h1{font-weight:800;font-size:clamp(2.8rem,7vw,5.6rem);line-height:.96;letter-spacing:-.03em;margin-bottom:1.4rem;text-wrap:balance}
+.lead{font-size:1.25rem;margin-bottom:2rem}
+.btn{display:inline-block;font:800 1.05rem var(--display);text-decoration:none;padding:.85rem 1.6rem;border-radius:999px;background:var(--sun);color:var(--deep);border:0;cursor:pointer;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-2px);background:#FFE15A}
+.btn.dark{background:var(--deep);color:var(--white)}
+.btn.dark:hover{background:var(--blue)}
+.btn[disabled]{opacity:.6;cursor:wait;transform:none}
+.facts{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.facts span{border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:.3rem .9rem;font-weight:600;font-size:.95rem}
+.sign-stage{display:flex;justify-content:center;padding:1rem}
+.sign{position:relative;width:min(380px,100%);background:repeating-linear-gradient(0deg,rgba(0,0,0,.035) 0 2px,transparent 2px 7px),linear-gradient(135deg,var(--kraft),var(--kraft-d));color:#1c1409;padding:2.6rem 1.6rem 1.8rem;border-radius:6px;box-shadow:0 22px 40px rgba(6,14,60,.45);transform:rotate(-4deg);transform-origin:50% 0;animation:swing 1.4s cubic-bezier(.2,.9,.3,1.15) both;text-align:center}
+.sign::before,.sign::after{content:"";position:absolute;top:14px;width:12px;height:12px;border-radius:50%;background:var(--blue);box-shadow:inset 0 0 0 3px rgba(0,0,0,.25)}
+.sign::before{left:16px}.sign::after{right:16px}
+.sign .s{font-family:var(--marker);font-size:1.1rem;opacity:.85}
+.sign .b{font-family:var(--marker);font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.05;display:block;transform:rotate(-1.5deg);margin:.3rem 0;letter-spacing:.04em}
+.sign .q{font-family:var(--marker);font-size:clamp(1.6rem,3.6vw,2.1rem);display:block;transform:rotate(1deg)}
+.sign .note{font-family:var(--marker);font-size:.95rem;border-top:2px dashed rgba(28,20,9,.45);padding-top:.8rem;margin-top:.8rem}
+@keyframes swing{0%{transform:rotate(-17deg) translateY(-40px);opacity:0}35%{opacity:1}100%{transform:rotate(-4deg) translateY(0);opacity:1}}
+
+.how{background:var(--sun)}
+.route{width:100%;height:auto;display:block;margin-bottom:2rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;list-style:none;counter-reset:s}
+.steps li{counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;background:var(--deep);color:var(--sun);font-weight:800;font-size:1.3rem;margin-bottom:1rem}
+.steps h3{font-size:1.5rem;font-weight:800;margin-bottom:.4rem}
+.nota-carrera{margin-top:2.5rem;font-weight:600;border-top:3px solid var(--deep);padding-top:1.2rem;max-width:46rem}
+
+.incl{background:var(--white)}
+.incl-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:start}
+.price{border:3px solid var(--deep);border-radius:18px;overflow:hidden}
+.price .top{background:var(--kraft);padding:1.4rem 1.5rem;background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.04) 0 2px,transparent 2px 7px);display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap}
+.price .tag{font-family:var(--marker);font-size:1.6rem}
+.price .amt{font-weight:800;font-size:2.6rem;line-height:1}
+.price .amt small{font-size:1rem;font-weight:600}
+.price ul{list-style:none;padding:1.4rem 1.5rem;display:grid;gap:.7rem}
+.price li{padding-left:1.9rem;position:relative}
+.price li::before{content:"✓";position:absolute;left:0;top:0;width:1.35rem;height:1.35rem;border-radius:50%;background:var(--sun);display:grid;place-items:center;font-weight:800;font-size:.8rem}
+.price .extra{border-top:2px dashed var(--deep);padding:1rem 1.5rem 1.4rem;font-size:.98rem}
+.price .extra b{display:block}
+.small{font-size:.92rem;opacity:.85}
+
+.safe{background:var(--deep);color:var(--white)}
+.safe h2{color:var(--sun);max-width:18ch}
+.safe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.safe-grid>div{border-top:4px solid var(--pink);padding-top:1.2rem}
+.safe-grid h3{font-size:1.35rem;font-weight:800;line-height:1.15;margin-bottom:.5rem}
+.safe a{color:var(--sun);font-weight:800}
+
+.about{background:var(--mist)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:2.5rem}
+.ph{aspect-ratio:4/3;border-radius:16px;border:3px solid var(--deep);overflow:hidden;margin-bottom:1rem;background:#dfe5f7}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.trio h3{font-size:1.5rem;font-weight:800;line-height:1.1;margin-bottom:.4rem}
+.illu{font-size:.85rem;opacity:.7;margin-top:1rem}
+
+.faq{background:var(--white)}
+.faq-list{max-width:52rem;margin-top:1.5rem}
+details{border-bottom:3px solid var(--deep);padding-block:1.1rem}
+details:first-child{border-top:3px solid var(--deep)}
+summary{cursor:pointer;font-weight:800;font-size:1.2rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:.7rem}
+
+.join{background:var(--blue);color:var(--white)}
+.join-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:start}
+form.wl{background:var(--white);color:var(--deep);border-radius:18px;padding:1.6rem;display:grid;gap:1rem;border:3px solid var(--deep);box-shadow:10px 10px 0 var(--deep)}
+.fld{display:grid;gap:.35rem}
+.fld label,.fld legend{font-weight:800;font-size:.98rem}
+.fld input[type=text],.fld input[type=email],.fld select{font:600 1.05rem var(--display);padding:.75rem 1rem;border-radius:12px;border:2px solid var(--deep);color:var(--deep);background:var(--white);width:100%}
+fieldset.fld{border:0}
+.radios{display:flex;gap:.6rem;flex-wrap:wrap}
+.radios label{display:flex;align-items:center;gap:.45rem;border:2px solid var(--deep);border-radius:999px;padding:.45rem .9rem;font-weight:600;cursor:pointer}
+.radios input{accent-color:var(--blue)}
+.chk{display:flex;gap:.6rem;align-items:flex-start;font-size:.92rem;line-height:1.4}
+.chk input{margin-top:.2rem;width:1.1rem;height:1.1rem;accent-color:var(--blue);flex:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.msg{font-weight:800;border-radius:12px;padding:.8rem 1rem}
+.msg.ok{background:#DDF5E4;color:#14532D}
+.msg.err{background:#FDE2E8;color:#831843}
+.join .why{list-style:none;display:grid;gap:.8rem;margin-top:1.5rem}
+.join .why li{padding-left:1.8rem;position:relative;font-weight:600}
+.join .why li::before{content:"→";position:absolute;left:0;color:var(--sun);font-weight:800}
+
+.muni{background:var(--sun)}
+.muni .wrap{display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap}
+.muni h2{max-width:20ch;margin:0}
+
+footer{background:var(--deep);color:rgba(255,255,255,.85);padding-block:3.5rem 1.8rem;font-size:.98rem}
+.foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2rem}
+footer h4{font-family:var(--marker);font-weight:400;color:var(--sun);font-size:1.2rem;margin-bottom:.8rem}
+footer ul{list-style:none;display:grid;gap:.45rem}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
+.legal{margin-top:2.5rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.2);font-size:.88rem;display:flex;gap:1rem 1.5rem;flex-wrap:wrap}
+
+@media (max-width:900px){
+  section{padding-block:3.8rem}
+  .hero-grid,.incl-grid,.join-grid{grid-template-columns:1fr;gap:1.8rem}
+  .sign-stage{order:-1;padding:.5rem 0 0}
+  .trio,.steps,.safe-grid{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  .menu{display:none}
+}
+@media (max-width:520px){.foot{grid-template-columns:1fr}form.wl{box-shadow:6px 6px 0 var(--deep);padding:1.2rem}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sign{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="strip">
+  <div class="wrap">
+    <span>¿Quieres echar una mano el día de la aventura?</span>
+    <a href="mailto:inigodelacalle@gmail.com?subject=Quiero%20ser%20voluntario">Hazte voluntario</a>
+  </div>
+</div>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="brand" href="#inicio">Izpi Run - Stop<small>NOMBRE PROVISIONAL</small></a>
+      <ul class="menu">
+        <li><a href="#como-funciona">Cómo funciona</a></li>
+        <li><a href="#incluye">Qué incluye</a></li>
+        <li><a href="#seguridad">Seguridad</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+      <a class="btn" href="#apuntate">Apúntate</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Haz de tu fin de semana una aventura a dedo.</h1>
+        <p class="lead">Sal en pareja desde tu ciudad, llega en autostop a un pueblo que no conoces y celébralo con sus vecinos en una gran fiesta.</p>
+        <a class="btn" href="#apuntate">Apúntate a la lista de espera</a>
+        <div class="facts" aria-label="Datos clave">
+          <span>Julio de 2027</span><span>500 plazas</span><span>En pareja</span><span>5 ciudades de salida</span>
+        </div>
+      </div>
+      <div class="sign-stage" aria-hidden="true">
+        <div class="sign">
+          <span class="s">DESTINO:</span>
+          <span class="b">SECRETO</span>
+          <span class="q">un pueblo con fiesta</span>
+          <div class="note">Lo desvelamos antes de abrir la venta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="how" id="como-funciona">
+    <div class="wrap">
+      <h2>Una aventura en tres tiempos</h2>
+      <p style="margin-bottom:2rem">Parejas que salen de cinco ciudades distintas y un único destino.</p>
+      <svg class="route" viewBox="0 0 900 300" role="img" aria-label="Cinco rutas que salen de Bilbao, Madrid, Zaragoza, Barcelona y Valencia y llegan al mismo pueblo">
+        <g fill="none" stroke="#0E1B4D" stroke-width="4" stroke-linecap="round" stroke-dasharray="3 14">
+          <path d="M70 40 C 280 20, 420 80, 560 120 S 740 150, 800 150"/>
+          <path d="M70 95 C 260 110, 420 110, 560 135 S 740 150, 800 150"/>
+          <path d="M70 150 C 280 160, 420 140, 560 150 S 740 150, 800 150"/>
+          <path d="M70 205 C 260 200, 420 180, 560 165 S 740 150, 800 150"/>
+          <path d="M70 260 C 280 280, 420 210, 560 180 S 740 152, 800 150"/>
+        </g>
+        <g fill="#FF5C93" stroke="#0E1B4D" stroke-width="3"><circle cx="70" cy="40" r="11"/><circle cx="70" cy="95" r="11"/><circle cx="70" cy="150" r="11"/><circle cx="70" cy="205" r="11"/><circle cx="70" cy="260" r="11"/></g>
+        <g fill="#0E1B4D" font-family="Permanent Marker, cursive" font-size="19"><text x="92" y="34">Bilbao</text><text x="92" y="89">Madrid</text><text x="92" y="144">Zaragoza</text><text x="92" y="199">Barcelona</text><text x="92" y="254">Valencia</text></g>
+        <path d="M800 103 c-26 0-44 18-44 42 0 30 44 66 44 66s44-36 44-66c0-24-18-42-44-42z" fill="#fff" stroke="#0E1B4D" stroke-width="4"/>
+        <text x="800" y="155" text-anchor="middle" fill="#0E1B4D" font-family="Permanent Marker, cursive" font-size="30">?</text>
+        <text x="800" y="245" text-anchor="middle" fill="#0E1B4D" font-family="Permanent Marker, cursive" font-size="19">Pueblo secreto</text>
+      </svg>
+      <ol class="steps">
+        <li><h3>Salida</h3><p>Cada pareja sale por la mañana desde Bilbao, Madrid, Zaragoza, Barcelona o Valencia. Sin transporte reservado: solo un cartel y un pulgar.</p></li>
+        <li><h3>Ruta</h3><p>Carreteras secundarias, gente que para y pueblos que no estaban en tu mapa. Con la app de seguimiento en el móvil y apoyo de la organización.</p></li>
+        <li><h3>Llegada</h3><p>Todas las parejas acaban en el mismo pueblo: acampada, música, comida local y una fiesta con los vecinos que dura hasta el amanecer.</p></li>
+      </ol>
+      <p class="nota-carrera">No es una carrera. No hay clasificación ni premio por llegar antes: lo que cuenta es el camino y la gente que te lleva.</p>
+    </div>
+  </section>
+
+  <section class="incl" id="incluye">
+    <div class="wrap incl-grid">
+      <div>
+        <h2>Qué incluye la plaza</h2>
+        <p>Una plaza es para una persona. Os apuntáis en pareja y cada uno tiene la suya.</p>
+        <p style="margin-top:1rem">El precio es el previsto hoy y lo confirmaremos al abrir la venta. Quien esté en la lista de espera lo sabrá antes que nadie.</p>
+      </div>
+      <div class="price">
+        <div class="top"><span class="tag">Aventura</span><span class="amt">60 € <small>por persona · previsto</small></span></div>
+        <ul>
+          <li>Seguro de accidentes para el día de la aventura</li>
+          <li>Pack de bienvenida con bebida</li>
+          <li>App de seguimiento y apoyo de la organización durante el viaje</li>
+          <li>Coche de ayuda si os quedáis atascados</li>
+          <li>Acampada en el pueblo</li>
+          <li>Entrada a la fiesta de llegada</li>
+        </ul>
+        <div class="extra"><b>¿Y la vuelta?</b>Estamos preparando un bus de vuelta a cada ciudad de salida, por unos 25 € más. Te avisaremos cuando esté confirmado.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="safe" id="seguridad">
+    <div class="wrap">
+      <h2>Aventura, sí. A ciegas, no.</h2>
+      <p>Hacer dedo es más seguro cuando no vas solo y alguien sabe dónde estás. Por eso cada pareja viaja con un protocolo sencillo.</p>
+      <div class="safe-grid">
+        <div><h3>Siempre localizables</h3><p>La app del móvil comparte vuestra ubicación con la organización. Antes de subir a un coche hacéis una foto de la matrícula desde la app.</p></div>
+        <div><h3>Botón de ayuda y palabra clave</h3><p>Si algo no va bien, un botón avisa a la organización. Y una palabra clave os permite pedir ayuda sin que el conductor se entere.</p></div>
+        <div><h3>Nadie se queda tirado sin plan</h3><p>Si os atascáis, os proponemos alternativas: transporte público, otro tramo o un coche de ayuda si hay uno libre. A las 21:00 llamamos a las parejas que aún no han llegado.</p></div>
+      </div>
+      <p style="margin-top:2.5rem">Las normas completas, con el punto violeta y el protocolo en el coche, están aquí: <a href="https://ikalek0.github.io/autostop-rural-ayuntamiento/normas.html">leer las normas</a>.</p>
+    </div>
+  </section>
+
+  <section class="about" id="pueblo">
+    <div class="wrap">
+      <h2>Unir la ciudad y el pueblo.</h2>
+      <p>Cada verano, cientos de personas de ciudad llegan a un pueblo que no estaba en su ruta. Queremos que esa visita deje semillas: vida en la plaza, clientes para el bar y la tienda, y ganas de volver.</p>
+      <div class="trio">
+        <div>
+          <div class="ph"><img src="img/pareja.jpg" alt="Una pareja haciendo autostop en una carretera rural al atardecer" loading="lazy"></div>
+          <h3>Aventura cerca de casa</h3>
+          <p>Sin avión, sin pasaporte y sin salir de España. Pones las ganas; el resto tiene un plan.</p>
+        </div>
+        <div>
+          <div class="ph"><img src="img/artesania.jpg" alt="Plaza de un pueblo con mercado de artesanía local" loading="lazy"></div>
+          <h3>Un pueblo que te recibe</h3>
+          <p>El pueblo organiza con nosotros. Su gente, su comida y sus costumbres son parte del plan.</p>
+        </div>
+        <div>
+          <div class="ph"><img src="img/plaza.jpg" alt="Participantes y vecinos celebrando juntos en la plaza" loading="lazy"></div>
+          <h3>Vecinos al volante</h3>
+          <p>Quien os lleve en el último tramo, en coche, furgoneta o tractor, entra gratis a la fiesta. Así el pueblo entero se suma.</p>
+        </div>
+      </div>
+      <p class="illu">Imágenes ilustrativas.</p>
+    </div>
+  </section>
+
+  <section class="faq" id="preguntas">
+    <div class="wrap">
+      <h2>Preguntas</h2>
+      <div class="faq-list">
+        <details><summary>¿Por qué el destino es secreto?</summary><p>Estamos eligiendo el pueblo junto con varios ayuntamientos. Lo anunciaremos antes de abrir la venta, y quien esté en la lista de espera lo sabrá primero.</p></details>
+        <details><summary>¿Cuándo se abre la venta?</summary><p>Si todo va según lo previsto, a principios de 2027. La lista de espera no te compromete a nada: solo te avisamos.</p></details>
+        <details><summary>¿Y si no conseguimos llegar?</summary><p>No te dejamos sin plan. Os proponemos transporte público u otro tramo, o mandamos un coche de ayuda si hay uno libre. No podemos garantizar a qué hora os recogerán, pero sí que no estaréis solos.</p></details>
+        <details><summary>No tengo pareja de viaje. ¿Puedo apuntarme?</summary><p>Sí. Márcalo en el formulario y te ayudaremos a encontrar a alguien de tu ciudad.</p></details>
+        <details><summary>¿Es seguro hacer autostop?</summary><p>Vais en pareja, localizables, con botón de ayuda, palabra clave y foto de la matrícula de cada coche. Además hay un seguro de accidentes. Puedes leer todo el protocolo en <a href="https://ikalek0.github.io/autostop-rural-ayuntamiento/normas.html">las normas</a>.</p></details>
+        <details><summary>¿Cómo vuelvo a casa?</summary><p>Estamos preparando un bus de vuelta a cada ciudad de salida, por unos 25 € más. También podéis volver por vuestra cuenta.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="join" id="apuntate">
+    <div class="wrap join-grid">
+      <div>
+        <h2>Apúntate a la lista de espera</h2>
+        <p>Son 500 plazas. Te avisaremos antes que a nadie cuando desvelemos el pueblo y cuando abramos la venta.</p>
+        <ul class="why">
+          <li>No pagas nada ni te comprometes a nada.</li>
+          <li>Solo te escribiremos sobre esta aventura.</li>
+          <li>Puedes darte de baja cuando quieras.</li>
+        </ul>
+      </div>
+      <form class="wl" id="wl-form" novalidate>
+        <div class="fld"><label for="wl-name">Tu nombre</label><input id="wl-name" name="nombre" type="text" autocomplete="given-name" maxlength="80" required></div>
+        <div class="fld"><label for="wl-email">Tu correo</label><input id="wl-email" name="email" type="email" autocomplete="email" maxlength="120" required placeholder="tu@correo.com"></div>
+        <div class="fld"><label for="wl-city">¿Desde qué ciudad saldrías?</label>
+          <select id="wl-city" name="ciudad" required>
+            <option value="">Elige una</option>
+            <option>Bilbao</option><option>Madrid</option><option>Zaragoza</option><option>Barcelona</option><option>Valencia</option><option value="Otra">Otra (dínoslo y lo tendremos en cuenta)</option>
+          </select>
+        </div>
+        <fieldset class="fld"><legend>¿Tienes pareja de viaje?</legend>
+          <div class="radios">
+            <label><input type="radio" name="pareja" value="Sí" required> Sí</label>
+            <label><input type="radio" name="pareja" value="Busco pareja"> Busco pareja</label>
+          </div>
+        </fieldset>
+        <div class="hp" aria-hidden="true"><label for="wl-web">No rellenes este campo</label><input id="wl-web" name="web" type="text" tabindex="-1" autocomplete="off"></div>
+        <label class="chk"><input type="checkbox" id="wl-ok" name="consentimiento" required> <span>Acepto que guardéis estos datos para avisarme de esta aventura, como explica la <a href="privacidad.html">política de privacidad</a>.</span></label>
+        <button class="btn dark" type="submit" id="wl-btn">Apuntarme</button>
+        <div id="wl-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="muni">
+    <div class="wrap">
+      <h2>¿Eres de un ayuntamiento o conoces un pueblo que encajaría?</h2>
+      <a class="btn dark" href="https://ikalek0.github.io/autostop-rural-ayuntamiento/">Ver la propuesta para ayuntamientos</a>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Izpi Run - Stop</h4>
+        <p>Aventura a dedo hasta un pueblo de España. Primera edición en julio de 2027. El nombre es provisional.</p>
+      </div>
+      <div>
+        <h4>La aventura</h4>
+        <ul>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#incluye">Qué incluye</a></li>
+          <li><a href="#seguridad">Seguridad</a></li>
+          <li><a href="#preguntas">Preguntas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:inigodelacalle@gmail.com">inigodelacalle@gmail.com</a></li>
+          <li><a href="mailto:inigodelacalle@gmail.com?subject=Quiero%20ser%20voluntario">Hazte voluntario</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>Proyecto en preparación. Precio y fechas previstos, pendientes de confirmar.</span>
+      <a href="privacidad.html">Privacidad</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Where sign-ups go: the URL of the Google Apps Script web app that writes to the waiting-list sheet.
+// While it is empty, the form opens an email to the organiser instead.
+var WAITLIST_URL = 'https://script.google.com/macros/s/AKfycbwFqLfDCfvzsYermAHE-YKKzE2VYpc3lf5LYG5A-oJNL3kgOwpYN-xV5Z5qcANb3ER6aw/exec';
+(function () {
+  var form = document.getElementById('wl-form'), btn = document.getElementById('wl-btn'), msg = document.getElementById('wl-msg');
+  function show(cls, text) { msg.className = 'msg ' + cls; msg.textContent = text; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = form.nombre.value.trim(), email = form.email.value.trim(), city = form.ciudad.value, pair = (form.querySelector('input[name=pareja]:checked') || {}).value || '';
+    if (form.web.value) return; // bot
+    if (!name) { form.nombre.focus(); show('err', 'Escribe tu nombre.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { form.email.focus(); show('err', 'Revisa tu correo.'); return; }
+    if (!city) { form.ciudad.focus(); show('err', 'Elige tu ciudad de salida.'); return; }
+    if (!pair) { show('err', 'Dinos si tienes pareja de viaje.'); return; }
+    if (!form.consentimiento.checked) { form.consentimiento.focus(); show('err', 'Necesitamos tu permiso para guardar el correo.'); return; }
+    var params = new URLSearchParams({ nombre: name, email: email, ciudad: city, pareja: pair, consentimiento: 'si', origen: (new URLSearchParams(location.search).get('o') || '').slice(0, 30) });
+    if (!WAITLIST_URL) {
+      location.href = 'mailto:inigodelacalle@gmail.com?subject=' + encodeURIComponent('Lista de espera') + '&body=' + encodeURIComponent('Nombre: ' + name + '\nCorreo: ' + email + '\nCiudad: ' + city + '\nPareja: ' + pair);
+      return;
+    }
+    btn.disabled = true; btn.textContent = 'Enviando…';
+    fetch(WAITLIST_URL, { method: 'POST', mode: 'no-cors', body: params })
+      .then(function () { form.reset(); show('ok', '¡Hecho, ' + name + '! Estás en la lista. Te escribiremos cuando desvelemos el pueblo.'); })
+      .catch(function () { show('err', 'No se ha podido enviar. Prueba otra vez o escríbenos a inigodelacalle@gmail.com.'); })
+      .then(function () { btn.disabled = false; btn.textContent = 'Apuntarme'; });
+  });
+})();
+</script>
+</body>
+</html>
