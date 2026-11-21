@@ -10,6 +10,7 @@
 <meta property="og:description" content="En pareja, a dedo, hasta un pueblo que te espera con una fiesta. Julio de 2027. 500 plazas.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://images.unsplash.com/photo-1645393757776-1af0538d39fc?auto=format&fit=crop&w=1200&h=630&q=80">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Cpath d=%27M50 6 94 50 50 94 6 50Z%27 fill=%27%23FFD21F%27/%3E%3Cpath d=%27M50 52 H85 L50 94 L15 52Z%27 fill=%27%231E9E6A%27/%3E%3Cpath d=%27M28 74 L47 52 L53 52 L72 74 L50 94Z%27 fill=%27%23141414%27/%3E%3Cpath d=%27M50 22l3.4 11.6 11.6 3.4-11.6 3.4-3.4 11.6-3.4-11.6-11.6-3.4 11.6-3.4z%27 fill=%27%23FF5C93%27 stroke=%27%23141414%27 stroke-width=%272.4%27/%3E%3Cpath d=%27M50 6 94 50 50 94 6 50Z%27 fill=%27none%27 stroke=%27%23141414%27 stroke-width=%277%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://images.unsplash.com">
@@ -49,13 +50,10 @@ h3{font-size:1.45rem;line-height:1.1}
 header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--cream) 92%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.8rem}
 .brand{font-family:var(--display);font-size:1.35rem;text-decoration:none;line-height:1;display:flex;align-items:center;gap:.6rem}
-.logo{position:relative;width:44px;height:44px;flex:none}
-.logo .sign{position:absolute;inset:4px;background:var(--sun);border:2.5px solid var(--ink);border-radius:9px;transform:rotate(45deg);box-shadow:2px 2px 0 var(--ink)}
-.logo .thumb{position:absolute;inset:0;display:grid;place-items:center;font-size:1.25rem;transform:rotate(-10deg)}
-.logo .spark{position:absolute;top:-5px;right:-6px;color:var(--pink);font-size:1rem;line-height:1;text-shadow:1px 1px 0 var(--ink)}
-.word{display:flex;flex-direction:column;line-height:.9}
-.word b{font-family:var(--display);font-weight:400;font-size:1.45rem;letter-spacing:.01em}
-.word b i{font-style:normal;color:var(--blue)}
+.logo{width:48px;height:48px;flex:none;filter:drop-shadow(2px 2px 0 rgba(20,20,20,.85))}
+.word{display:flex;flex-direction:column;align-items:flex-start;line-height:.9}
+.word b{font-family:var(--display);font-weight:400;font-size:1.45rem;letter-spacing:.01em;display:flex;align-items:center;gap:.35rem}
+.word b i{font-style:normal;font-size:.95rem;background:var(--blue);color:#fff;padding:.12em .32em .14em;border-radius:.2em;transform:rotate(-3deg)}
 .brand small{display:block;font-family:var(--text);font-size:.68rem;font-weight:600;letter-spacing:.08em;opacity:.6;margin-top:.15rem}
 .menu{display:flex;gap:1.6rem;list-style:none}
 .menu a{text-decoration:none;font-weight:600}
@@ -247,7 +245,7 @@ footer a:hover{text-decoration:underline}
 
 <header class="top">
   <div class="wrap nav">
-    <a class="brand" href="#inicio" aria-label="La Fuga Stop, inicio"><span class="logo" aria-hidden="true"><span class="sign"></span><span class="thumb">👍</span><span class="spark">✦</span></span><span class="word"><b>LA FUGA <i>STOP</i></b><small>NOMBRE PROVISIONAL</small></span></a>
+    <a class="brand" href="#inicio" aria-label="La Fuga Stop, inicio"><svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><defs><clipPath id="lf-rombo"><path d="M50 6 94 50 50 94 6 50Z"/></clipPath></defs><path d="M50 6 94 50 50 94 6 50Z" fill="#FFD21F"/><g clip-path="url(#lf-rombo)"><path d="M0 50 Q14 45 26 48 T48 47.5 L52 47.5 Q66 44 78 47.5 T100 49 V100 H0Z" fill="#1E9E6A"/><path d="M14 100 L48.8 48 L51.2 48 L86 100Z" fill="#141414"/><path d="M49.4 59h1.2v5h-1.2z M48.9 69h2.2v8h-2.2z M48.2 82h3.6v9h-3.6z" fill="#FFD21F"/><path d="M57 48v-4.5l2.6-2.6 2.6 2.6V48z M63 48V37.5h1.2v-2.2l1.4-1.8 1.4 1.8v2.2h1.2V48z M70 48v-3.6l2.4-2.4 2.4 2.4V48z" fill="#141414"/></g><path d="M50 26.5l2.3 8.2 8.2 2.3-8.2 2.3-2.3 8.2-2.3-8.2-8.2-2.3 8.2-2.3z" fill="#FF5C93" stroke="#141414" stroke-width="1.6" stroke-linejoin="round"/><path d="M50 6 94 50 50 94 6 50Z" fill="none" stroke="#141414" stroke-width="5" stroke-linejoin="round"/></svg><span class="word"><b>LA FUGA <i>STOP</i></b></span></a>
     <nav aria-label="Principal"><ul class="menu">
       <li><a href="#aventura">La aventura</a></li>
       <li><a href="#como-funciona">Cómo funciona</a></li>
@@ -490,7 +488,7 @@ footer a:hover{text-decoration:underline}
     <div class="foot">
       <div>
         <h4>La Fuga Stop</h4>
-        <p>Aventura a dedo hasta un pueblo de España. Primera edición en julio de 2027. El nombre es provisional.</p>
+        <p>Aventura a dedo hasta un pueblo de España. Primera edición en julio de 2027.</p>
       </div>
       <div>
         <h4>La aventura</h4>
